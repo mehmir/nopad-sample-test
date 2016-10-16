@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sampleTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEa-OT-mMz"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شرکت نوپاد" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0i-kg-dzj">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XXh-TF-i0W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="پر فروش ها" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHF-lO-par">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Akd-N2-EFO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="W7n-c9-tDL"/>
+                                    <constraint firstAttribute="width" secondItem="Akd-N2-EFO" secondAttribute="height" multiplier="1:1" id="vyD-XN-WyS"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q0i-kg-dzj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Ee-sB-ax2"/>
+                            <constraint firstItem="pHF-lO-par" firstAttribute="top" secondItem="Q0i-kg-dzj" secondAttribute="bottom" constant="20" id="9FO-uo-xwq"/>
+                            <constraint firstItem="pHF-lO-par" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="De3-Fo-Tut"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pHF-lO-par" secondAttribute="trailing" id="EzW-Lz-5mb"/>
+                            <constraint firstItem="Q0i-kg-dzj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="PIC-jt-kRA"/>
+                            <constraint firstItem="Akd-N2-EFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qqe-Cc-I5b"/>
+                            <constraint firstItem="Akd-N2-EFO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WuP-qf-A8K"/>
+                            <constraint firstAttribute="height" secondItem="PEa-OT-mMz" secondAttribute="height" multiplier="3" id="dRU-3l-bLj"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0i-kg-dzj" secondAttribute="trailing" id="o1p-he-NnW"/>
+                            <constraint firstItem="PEa-OT-mMz" firstAttribute="top" secondItem="pHF-lO-par" secondAttribute="bottom" constant="8" id="rAR-TO-vBD"/>
+                            <constraint firstAttribute="trailing" secondItem="PEa-OT-mMz" secondAttribute="trailing" id="uMk-TW-Yuo"/>
+                            <constraint firstItem="PEa-OT-mMz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uWD-aj-hto"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="Akd-N2-EFO" id="B0A-LN-KyH"/>
+                        <outlet property="scrolView" destination="PEa-OT-mMz" id="ONq-7m-mnI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="66.11694152923539"/>
+        </scene>
+    </scenes>
+</document>
