@@ -13,9 +13,8 @@ class ViewController: UIViewController {
     var items : [Book] = []
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scrolView: UIScrollView!
-    let WIDTH : CGFloat = 150
+    
     let BASE_URL = URL(string: "http://shahreketabonline.com/api/product/getBestSellers?categoryId=49&count=10")
     
 
@@ -25,7 +24,6 @@ class ViewController: UIViewController {
         
         indicator.isHidden = true
         loadItems()
-        
     }
 
     
@@ -55,17 +53,17 @@ class ViewController: UIViewController {
                     }
                 }
             } catch {
-                print("error serializing JSON: \(error)")
+                print("error: \(error)")
             }
             DispatchQueue.main.async {
-                self.loadItemCelss()
+                self.loadItemCells()
             }
         }
         
         dataTask.resume()
     }
     
-    func loadItemCelss()
+    func loadItemCells()
     {
         let count = items.count
         var i = 1

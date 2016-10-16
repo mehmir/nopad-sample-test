@@ -30,7 +30,7 @@ class CellView : UIView
         
         titleLabel.text = self.title
         priceLabel.text = self.price
-        imageView.downloadedFrom(link: self.imageUrl!)
+        imageView.downloadedFrom(link: imageUrl, contentMode: .scaleToFill)
         
         setImageProperties()
         addConstraints()
@@ -86,6 +86,5 @@ class CellView : UIView
         imageView.clipsToBounds = true;
         imageView.layer.borderWidth = 3
         imageView.layer.borderColor = UIColor.darkGray.cgColor
-        imageView.contentMode = .scaleToFill
     }
 }
